@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: "MedievalSharp", sans-serif;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  height: 0;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+  z-index: 0;
+}
+#plane-symbols {
+  opacity : 0.5;
+}
+
+#active-svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#footer {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  font-size: 0.7em;
+  text-align: center;
+  z-index: 1;
+}
+
+.shex {
+  display: inline-block;
+  position: relative;
+  top: 0.25em;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  background-color: floralwhite;
+  aspect-ratio: 5/6;
+  min-width: 1em;
+}
+
+.hex {
+  stroke: black;
+  stroke-width: 0.1;
+  cursor: pointer;
+  fill: floralwhite;
+  z-index:2;
+}
+.hex:hover {
+  opacity: 0.5;
+}
+.hex.water {
+  fill: lightblue;
+}
+
+.relief {
+  z-index:2;
+}
+
+#map-pin path, #map-point circle, #creature path, #faction path, #hazard path, #area path{
+  fill: inherit;
+}
+
+.poi, .place {
+  cursor: pointer;
+}
+
+.poi.point {
+  fill-opacity: 0;
+  stroke: black;
+  stroke-width: 3;
+  stroke-dasharray: 4;
+}
+
+circle.place {
+  fill: floralwhite;
+  fill-opacity: .8;
+}
+use.creature {
+  fill: orange;
+}
+use.hazard {
+  fill: orangered;
+}
+use.area {
+  fill: blue;
+}
+use.faction {
+  fill: darkviolet;
+}
+
+/*
+.hex.swamp {
+  fill: olive;
+}
+.hex.desert {
+  fill: khaki;
+}
+.hex.plains {
+  fill: lightgreen;
+}
+.hex.forest {
+  fill: green;
+}
+.hex.hills {
+  fill: brown;
+}
+.hex.mountains {
+  fill: gray;
+}
+
+*/
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  border-radius: 5px;
+  min-width: 160px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:focus .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .hex-marker {
+  color: green;
+}
+/*
+  Starts right and then points down on hover 
+*/
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.link:hover .arrow {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.a-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.a-up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
