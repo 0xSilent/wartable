@@ -6,14 +6,8 @@ h1, h2, h3 {
   font-family: "MedievalSharp", sans-serif;
 }
 
-.m-auto {
-  margin: auto;
-}
-
-.hidden {
-  display: none;
-  visibility: hidden;
-  height: 0;
+.rtl {
+  direction: rtl;
 }
 
 .centered {
@@ -32,10 +26,6 @@ h1, h2, h3 {
   background-color: lightgray;
   z-index: 0;
 }
-#plane-symbols {
-  opacity : 0.5;
-}
-
 #active-svg {
   position: fixed;
   top: 0;
@@ -53,6 +43,17 @@ h1, h2, h3 {
   font-size: 0.7em;
   text-align: center;
   z-index: 1;
+}
+
+.square-sm {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+.circle-vs {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
 }
 
 .shex {
@@ -83,59 +84,11 @@ h1, h2, h3 {
   z-index:2;
 }
 
-#map-pin path, #map-point circle, #creature path, #faction path, #hazard path, #area path{
-  fill: inherit;
-}
-
-.poi, .place {
-  cursor: pointer;
-}
-
-.poi.point {
-  fill-opacity: 0;
-  stroke: black;
-  stroke-width: 3;
-  stroke-dasharray: 4;
-}
-
-circle.place {
-  fill: floralwhite;
-  fill-opacity: .8;
-}
-use.creature {
-  fill: orange;
-}
-use.hazard {
-  fill: orangered;
-}
-use.area {
-  fill: blue;
-}
-use.faction {
-  fill: darkviolet;
-}
 
 /*
-.hex.swamp {
-  fill: olive;
-}
-.hex.desert {
-  fill: khaki;
-}
-.hex.plains {
-  fill: lightgreen;
-}
-.hex.forest {
-  fill: green;
-}
-.hex.hills {
-  fill: brown;
-}
-.hex.mountains {
-  fill: gray;
-}
-
+  Dropdown
 */
+
 .dropdown {
   position: relative;
 }
@@ -166,6 +119,7 @@ use.faction {
 .dropdown:hover .hex-marker {
   color: green;
 }
+
 /*
   Starts right and then points down on hover 
 */
